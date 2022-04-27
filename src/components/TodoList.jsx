@@ -100,17 +100,19 @@ function TodoList() {
 
           <button onClick={AddTodo}>{(ToggleItem) ? "➕" : "Edit"}</button>
         </div>
+        <div className="TodoItemwrapper">
         {StoreTodo.map((e) => {
           return (
             <div key={e.id} className="todoItem">
               <h2 >{e.name} </h2>
               <div className='btn-item'>
-                <button className='btn-item' onClick={() => EditTodoItem(e.id)}>Edit</button>
-                <button onClick={() => DltTodoItem(e.id)}>Delete</button>
+                <button className='btnn-item' onClick={() => EditTodoItem(e.id)}>Edit</button>
+                <button className='btnn-item' onClick={() => DltTodoItem(e.id)}>Delete</button>
               </div>
             </div>
           )
         })}
+        </div>
         <button className='btn' onClick={DeleteAllTodo}>Clear All List</button>
       </div>
       <ToastContainer
