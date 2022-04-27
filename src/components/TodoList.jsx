@@ -93,18 +93,22 @@ function TodoList() {
   return (
     <>
       <div className='Todo-container'>
+        <div className="todo-wrap">
         <h2>Add Your Todo List Here ✌</h2>
+        <button className='btn' onClick={DeleteAllTodo}>Clear All List</button>
+
         <div className='input-wrapper'>
           {/* <span>📜</span> */}
           <input type="text" value={TodoData} placeholder="📜Write Your task Here..." onChange={(e) => setTodoData(e.target.value)} />
 
           <button onClick={AddTodo}>{(ToggleItem) ? "➕" : "Edit"}</button>
         </div>
+
         <div className="TodoItemwrapper">
         {StoreTodo.map((e) => {
           return (
             <div key={e.id} className="todoItem">
-              <h2 >{e.name} </h2>
+              <h3 >{e.name} </h3>
               <div className='btn-item'>
                 <button className='btnn-item' onClick={() => EditTodoItem(e.id)}>Edit</button>
                 <button className='btnn-item' onClick={() => DltTodoItem(e.id)}>Delete</button>
@@ -113,7 +117,7 @@ function TodoList() {
           )
         })}
         </div>
-        <button className='btn' onClick={DeleteAllTodo}>Clear All List</button>
+        </div>
       </div>
       <ToastContainer
         position="top-center"

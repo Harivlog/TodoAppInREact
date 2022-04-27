@@ -7,6 +7,13 @@
     align-items: center;
     flex-direction: column;
     gap: 2rem;
+    position: relative;
+}
+.todo-wrap{
+    width: 30%;
+    /* background: #000; */
+    height: auto;
+    position: relative;
 }
 .Todo-container h2{
     color: #fff;
@@ -16,8 +23,10 @@
     display: flex;
     gap: 2rem;
     flex-direction: column;
-    overflow: scroll;
-    width: 30%;
+    overflow: auto;
+    padding: 0.3rem;
+    /* background: #000; */
+    width: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -33,7 +42,8 @@
     width: 100%;
     color: black;
 }
-.todoItem h2{
+.todoItem h3{
+    white-space:pre-wrap;
     color: black;
     font-size: 1.5rem;
 }
@@ -49,9 +59,12 @@
     color: white;
 }
 .btn{
-    padding: 0.5rem 0.9rem;
+    padding: 0.5rem 2rem;
     cursor: pointer;
-    margin-top: 1rem;
+    margin-bottom: 1rem;
+    /* position: absolute;
+    top: 0;
+    left: 1rem; */
 }
 .btn-item{
     display: flex;
@@ -65,7 +78,7 @@
     background: #fff;
     border-radius: 0.7rem;
     padding: 0.5rem;
-    width: 30%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,15 +93,24 @@ REsponsive media queries
 */
 
 @media (max-width: 1060px){
-.input-wrapper, .TodoItemwrapper{
+
+    .todo-wrap{
         width: 50%;
     }
 }
 @media (max-width: 660px){
-    .input-wrapper, .TodoItemwrapper{
+    
+        .todo-wrap{
             width: 80%;
         }
         .input-wrapper input{
             width: auto;
         }
     }
+
+
+
+
+    /* 
+    git remote add myorigin https://github.com/Harivlog/TodoAppInREact  
+    */
